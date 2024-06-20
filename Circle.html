@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsating Circle</title>
+    <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    }
+
+    .circle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(26, 160, 26);
+    border-radius: 50%;
+    animation: pulsate 3s infinite;
+    }
+
+    @keyframes pulsate {
+    0% {
+        transform: scale(2);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+    100% {
+        transform: scale(2);
+    }
+    }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

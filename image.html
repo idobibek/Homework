@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-In Image Gallery</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 800px;
+        }
+        .gallery img {
+            width: calc(33.333% - 10px);
+            opacity: 0;
+            animation: fadeIn 5s ease forwards infinite;
+        }
+        .gallery img:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .gallery img:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .gallery img:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .gallery img:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        .gallery img:nth-child(5) {
+            animation-delay: 1s;
+        }
+        .gallery img:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        .gallery img:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+        .gallery img:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+        .gallery img:nth-child(9) {
+            animation-delay: 1.8s;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://th.bing.com/th/id/OIP.pAcu7875Nl6e_M0tBXBzGQHaE5?w=263&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 1">
+        <img src="https://th.bing.com/th/id/OIP.wg4R0mAD1_DQAII9hCM-8AHaDk?w=317&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 2">
+        <img src="https://cdn.pixabay.com/photo/2022/09/27/19/46/ai-generated-7483596_960_720.jpg" alt="Image 3">
+        <img src="https://th.bing.com/th/id/OIP.Mvcr0QDsGXOx29cSBfXd6AHaE7?w=254&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 4">
+        <img src="https://th.bing.com/th/id/OIP.ZlCkjahL_QMQtsoV8Pp_JgHaEP?w=274&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 5">
+        <img src="https://th.bing.com/th/id/OIP.8IsQ7ViZmlo936S4jGXwrAHaFS?rs=1&pid=ImgDetMain" alt="Image 6">
+        <img src="https://th.bing.com/th/id/OIP.gwPB0maHCgO63zJeNThlGAHaE8?pid=ImgDet&w=192&h=128&c=7" alt="Image 7">
+        <img src="https://th.bing.com/th/id/OIP.TEkoavhuD_ZApkg9EE1sTgHaFj?pid=ImgDet&w=192&h=144&c=7" alt="Image 8">
+        <img src="https://th.bing.com/th/id/OIP.mrfRF_RHYcfsIYCbriqWsQHaEY?pid=ImgDet&w=192&h=113&c=7" alt="Image 9">
+    </div>
+</body>
+</html>

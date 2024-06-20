@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Progress Bar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .progress-container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 30px;
+            width: 0;
+            background-color: #3498db;
+            border-radius: 25px 0 0 25px;
+            transition: width 1s ease-out;
+        }
+        .progress-text {
+            text-align: center;
+            font-size: 1em;
+            line-height: 30px;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">
+            <div class="progress-text" id="progress-text">0%</div>
+        </div>
+    </div>
+
+    <script>
+        function setProgress(value) {
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            progressBar.style.width = value + '%';
+            progressText.textContent = value + '%';
+        }
+
+        setProgress(80);
+    </script>
+</body>
+</html>
